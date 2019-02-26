@@ -6,9 +6,8 @@ module.exports = {
     'jest/globals': true
   },
   extends: [
-    'eslint:recommended',
+    'airbnb',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
     'prettier',
     'prettier/@typescript-eslint',
@@ -30,6 +29,13 @@ module.exports = {
   plugins: ['@typescript-eslint', 'jest', 'prettier', 'react', 'react-hooks'],
   root: true,
   settings: {
+    'import/extensions': ['.js', 'jsx', '.ts', '.tsx'],
+    'import/core-modules': ['app'],
+    'import/resolver': {
+      node: {
+        extensions: ['.js', 'jsx', '.ts', '.tsx']
+      }
+    },
     react: {
       version: 'detect'
     }
@@ -58,6 +64,18 @@ module.exports = {
     'react/jsx-uses-vars': 'error',
     'react/prop-types': 'off',
     'react/prefer-stateless-function': 'warn',
+
+    // import
+    'import/extensions': [
+      'error',
+      'always',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never'
+      }
+    ],
 
     // prettier
     'prettier/prettier': [
