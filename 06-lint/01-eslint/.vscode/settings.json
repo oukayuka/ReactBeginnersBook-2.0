@@ -1,0 +1,30 @@
+{
+  "editor.formatOnSave": true,
+  "css.validate": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "prettier.eslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  "stylelint.enable": true,
+  "stylelint.configOverrides": {
+    "ignoreFiles": [
+      "**/*.js",
+      "**/*.ts",
+      "**/*.html",
+      "**/*.md",
+      "**/node_modules/**/*.*"
+    ]
+  },
+  "typescript.tsserver.trace": "verbose"
+}
