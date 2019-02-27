@@ -1,0 +1,14 @@
+#root {
+  margin: 2.5em auto 0;
+  max-width: 930px;
+}
+
+.container {
+  font-size: 1rem !important;
+  max-width: none !important;
+  width: 700px !important;
+}
+
+.number-board {
+  margin-top: 15px !important;
+}
