@@ -26,6 +26,7 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
     'eol-last': ['error', 'always'],
     'func-style': ['error', 'expression', { allowArrowFunctions: true }],
+    'newline-before-return': 'error',
     'no-dupe-class-members': 'error',
     'no-var': 'error',
     'object-shorthand': ['error', 'always'],
