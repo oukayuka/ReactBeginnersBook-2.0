@@ -8,6 +8,8 @@ module.exports = {
   extends: [
     'airbnb',
     'plugin:@typescript-eslint/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
     'plugin:prettier/recommended',
     'prettier',
     'prettier/@typescript-eslint',
@@ -26,11 +28,15 @@ module.exports = {
     project: './tsconfig.json',
     sourceType: 'module'
   },
-  plugins: ['@typescript-eslint', 'jest', 'prettier', 'react', 'react-hooks'],
+  plugins: [
+    '@typescript-eslint',
+    'jest',
+    'prettier',
+    'react',
+    'react-hooks'
+  ],
   root: true,
   settings: {
-    'import/extensions': ['.js', 'jsx', '.ts', '.tsx'],
-    'import/core-modules': ['app'],
     'import/resolver': {
       node: {
         extensions: ['.js', 'jsx', '.ts', '.tsx']
@@ -64,7 +70,7 @@ module.exports = {
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/prop-types': 'off',
-    'react/prefer-stateless-function': 'warn',
+    'react/prefer-stateless-function': 'off',
 
     // import
     'import/extensions': [
