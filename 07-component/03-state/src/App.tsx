@@ -27,6 +27,7 @@ class App extends Component<{}, AppState> {
 
   render() {
     const { count } = this.state;
+
     return (
       <div className="container">
         <header>
