@@ -32,8 +32,7 @@ module.exports = {
     '@typescript-eslint',
     'jest',
     'prettier',
-    'react',
-    'react-hooks'
+    'react'
   ],
   root: true,
   settings: {

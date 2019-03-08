@@ -72,6 +72,10 @@ module.exports = {
     'react/prop-types': 'off',
     'react/prefer-stateless-function': 'off',
 
+    // react hooks
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+
     // import
     'import/extensions': [
       'error',

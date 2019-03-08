@@ -33,7 +33,6 @@ module.exports = {
     'jest',
     'prettier',
     'react',
-    'react-hooks'
   ],
   root: true,
   settings: {
