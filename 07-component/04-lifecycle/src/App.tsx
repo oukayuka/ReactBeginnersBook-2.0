@@ -15,7 +15,9 @@ class App extends Component<{}, AppState> {
     this.state = { timeLeft: LIMIT };
   }
 
-  reset = () => this.setState({ timeLeft: LIMIT });
+  reset = () => {
+    this.setState({ timeLeft: LIMIT });
+  };
 
   tick = () => {
     this.setState(prevState => ({ timeLeft: prevState.timeLeft - 1 }));

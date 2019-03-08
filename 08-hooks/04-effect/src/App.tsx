@@ -8,7 +8,9 @@ const LIMIT = 60;
 const App: FC = () => {
   const [timeLeft, setTimeLeft] = useState(LIMIT);
 
-  const reset = () => setTimeLeft(LIMIT);
+  const reset = () => {
+    setTimeLeft(LIMIT);
+  };
 
   const tick = () => {
     setTimeLeft(prevTime => (prevTime === 0 ? LIMIT : prevTime - 1));
@@ -18,7 +20,7 @@ const App: FC = () => {
     const timerId = setInterval(tick, 1000);
 
     return () => clearInterval(timerId);
-  }, []);
+  }, [tick]);
 
   return (
     <div className="container">
