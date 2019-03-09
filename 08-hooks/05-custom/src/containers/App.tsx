@@ -2,16 +2,15 @@ import React, { FC, useEffect, useState } from 'react';
 
 import AppComponent from '../components/App';
 
-const useTimer = (): [number, () => void] => {
-  const LIMIT = 60;
-  const [timeLeft, setTimeLeft] = useState(LIMIT);
+const useTimer = (limitSec: number): [number, () => void] => {
+  const [timeLeft, setTimeLeft] = useState(limitSec);
 
   const reset = () => {
-    setTimeLeft(LIMIT);
+    setTimeLeft(limitSec);
   };
 
   const tick = () => {
-    setTimeLeft(prevTime => (prevTime === 0 ? LIMIT : prevTime - 1));
+    setTimeLeft(prevTime => (prevTime === 0 ? limitSec : prevTime - 1));
   };
 
   useEffect(() => {
@@ -24,7 +23,8 @@ const useTimer = (): [number, () => void] => {
 };
 
 const AppContainer: FC = () => {
-  const [timeLeft, reset] = useTimer();
+  const LIMIT = 60;
+  const [timeLeft, reset] = useTimer(LIMIT);
 
   return <AppComponent timeLeft={timeLeft} reset={reset} />;
 };

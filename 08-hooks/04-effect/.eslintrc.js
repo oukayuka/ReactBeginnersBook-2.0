@@ -74,7 +74,6 @@ module.exports = {
 
     // react hooks
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
 
     // import
     'import/extensions': [

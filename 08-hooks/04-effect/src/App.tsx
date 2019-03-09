@@ -20,7 +20,7 @@ const App: FC = () => {
     const timerId = setInterval(tick, 1000);
 
     return () => clearInterval(timerId);
-  }, [tick]);
+  }, []);
 
   return (
     <div className="container">
