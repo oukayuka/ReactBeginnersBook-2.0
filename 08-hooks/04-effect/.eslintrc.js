@@ -73,7 +73,7 @@ module.exports = {
     'react/prefer-stateless-function': 'off',
 
     // react hooks
-    "react-hooks/rules-of-hooks": "error",
+    'react-hooks/rules-of-hooks': 'error',
 
     // import
     'import/extensions': [

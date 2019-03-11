@@ -26,15 +26,6 @@
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
   "stylelint.enable": true,
-  "stylelint.configOverrides": {
-    "ignoreFiles": [
-      "**/*.js",
-      "**/*.ts",
-      "**/*.html",
-      "**/*.md",
-      "**/node_modules/**/*.*"
-    ]
-  },
   "typescript.tsserver.trace": "verbose",
   "[markdown]": {
     "files.trimTrailingWhitespace": false

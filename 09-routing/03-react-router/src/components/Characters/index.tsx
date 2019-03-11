@@ -11,7 +11,7 @@ import CharacterList from './CharacterList';
 
 import './index.css';
 
-type CharactersProps = RouteComponentProps<{ code: string }>;
+type CharactersProps = {} & RouteComponentProps<{ code: string }>;
 
 const Characters: FC<CharactersProps> = ({ history, location, match }) => {
   const codes = Object.keys(characterData);
@@ -35,7 +35,13 @@ const Characters: FC<CharactersProps> = ({ history, location, match }) => {
         />
       )}
       <Divider hidden />
-      <Button basic color="grey" onClick={() => history.push('/')}>
+      <Button
+        basic
+        color="grey"
+        onClick={() => {
+          history.push('/');
+        }}
+      >
         <Icon name="home" />
         ホームへ
       </Button>
