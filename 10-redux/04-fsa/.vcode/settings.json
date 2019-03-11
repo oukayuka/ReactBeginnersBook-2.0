@@ -1,0 +1,38 @@
+{
+  "css.validate": true,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.renderIndentGuides": true,
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": true,
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+  "extensions.autoUpdate": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "npm.enableScriptExplorer": true,
+  "prettier.eslintIntegration": true,
+  "stylelint.enable": true,
+  "stylelint.configOverrides": {
+    "ignoreFiles": [
+      "**/*.js",
+      "**/*.ts",
+      "**/*.html",
+      "**/*.md",
+      "**/node_modules/**/*.*"
+    ]
+  },
+  "tslint.enable": true,
+  "tslint.autoFixOnSave": true,
+  "tslint.packageManager": "yarn",
+  "typescript.tsserver.trace": "verbose",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}"
+}
