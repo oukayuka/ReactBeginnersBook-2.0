@@ -27,7 +27,7 @@
     "redux-saga": "^1.0.2",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.85.0",
-    "typescript": "^3.4.0-dev.20190314"
+    "typescript": "^3.3.3333"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -54,6 +54,7 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jest": "^22.3.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prefer-arrow": "^1.1.5",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.5.0",

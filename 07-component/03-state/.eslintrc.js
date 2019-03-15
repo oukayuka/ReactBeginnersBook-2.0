@@ -32,7 +32,9 @@ module.exports = {
     '@typescript-eslint',
     'jest',
     'prettier',
-    'react'
+    'prefer-arrow',
+    'react',
+    'react-hooks'
   ],
   root: true,
   settings: {
@@ -55,8 +57,18 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',
     indent: 'off',
-    '@typescript-eslint/indent': ['error', 2],
+    '@typescript-eslint/indent': 'off',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
+
+    // prefer-arrow
+    'prefer-arrow/prefer-arrow-functions': [
+      'error',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: true,
+        classPropertiesAllowed: false
+      }
+    ],
 
     // react
     'react/jsx-filename-extension': [
@@ -71,6 +83,9 @@ module.exports = {
     'react/prop-types': 'off',
     'react/prefer-stateless-function': 'off',
 
+    // react hooks
+    'react-hooks/rules-of-hooks': 'error',
+
     // import
     'import/extensions': [
       'error',
@@ -82,6 +97,7 @@ module.exports = {
         tsx: 'never'
       }
     ],
+    'import/prefer-default-export': 'off',
 
     // prettier
     'prettier/prettier': [

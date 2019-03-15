@@ -32,6 +32,7 @@ module.exports = {
     '@typescript-eslint',
     'jest',
     'prettier',
+    'prefer-arrow',
     'react',
     'react-hooks'
   ],
@@ -58,6 +59,16 @@ module.exports = {
     indent: 'off',
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
+
+    // prefer-arrow
+    'prefer-arrow/prefer-arrow-functions': [
+      'error',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: true,
+        classPropertiesAllowed: false
+      }
+    ],
 
     // react
     'react/jsx-filename-extension': [

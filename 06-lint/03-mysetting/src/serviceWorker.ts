@@ -11,6 +11,8 @@
 // opt-in, read http://bit.ly/CRA-PWA
 
 /* eslint func-style: 'off' */
+/* eslint no-param-reassign: 'off' */
+/* eslint no-use-before-define: 'off' */
 /* eslint '@typescript-eslint/no-use-before-define': 'off' */
 
 const isLocalhost = Boolean(
