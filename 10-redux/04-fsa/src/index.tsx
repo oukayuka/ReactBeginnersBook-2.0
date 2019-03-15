@@ -4,13 +4,13 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 import App from './App';
-import counterReducer, { initialState } from './reducer';
+import counterReducer from './reducer';
 import * as serviceWorker from './serviceWorker';
 
 import './index.css';
 import './styles/semantic.min.css';
 
-const store = createStore(counterReducer, initialState);
+const store = createStore(counterReducer);
 
 ReactDOM.render(
   <Provider store={store}>

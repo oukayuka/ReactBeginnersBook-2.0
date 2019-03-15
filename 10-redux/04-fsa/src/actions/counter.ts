@@ -1,22 +1,21 @@
-import { Action } from '.';
+export const ADD = 'ADD';
+export const DECREMENT = 'DECREMENT';
+export const INCREMENT = 'INCREMENT';
 
-export enum CounterActionType {
-  ADD = 'COUNTER/ADD',
-  DECREMENT = 'COUNTER/DECREMENT',
-  INCREMENT = 'COUNTER/INCREMENT',
-}
-
-export type CounterAction = Action<CounterActionType, { amount: number }>;
-
-export const add = (amount: number): CounterAction => ({
-  type: CounterActionType.ADD,
+export const add = (amount: number) => ({
+  type: ADD as typeof ADD,
   payload: { amount },
 });
 
-export const decrement = (): CounterAction => ({
-  type: CounterActionType.DECREMENT,
+export const decrement = () => ({
+  type: DECREMENT as typeof DECREMENT,
 });
 
-export const increment = (): CounterAction => ({
-  type: CounterActionType.INCREMENT,
+export const increment = () => ({
+  type: INCREMENT as typeof INCREMENT,
 });
+
+export type CounterAction =
+  | ReturnType<typeof add>
+  | ReturnType<typeof decrement>
+  | ReturnType<typeof increment>;
