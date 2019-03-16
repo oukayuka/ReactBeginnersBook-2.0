@@ -6,9 +6,9 @@ export interface Action<Payload> {
   meta?: { [key: string]: any } | null;
 }
 
-export interface ActionStart<ActionType, Payload> {
+export interface ActionStart<ActionType, Params> {
   type: ActionType;
-  payload?: Payload;
+  payload?: Params;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   meta?: { [key: string]: any } | null;
 }
