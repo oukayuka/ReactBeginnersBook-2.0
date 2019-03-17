@@ -1,4 +1,4 @@
-# 『りあクト！ TypeScript で始めるつらくない React 開発 第1.1版』
+# 『りあクト！ TypeScriptで始めるつらくないReact開発 第2版』
 
 ## ■ 本の紹介
 
