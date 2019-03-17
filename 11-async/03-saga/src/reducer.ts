@@ -1,7 +1,7 @@
 import { Reducer } from 'redux';
 import { AxiosError } from 'axios';
 
-import { MemberAction } from './actions/github';
+import { GithubAction } from './actions/github';
 import * as ActionType from './actions/githubConstants';
 import { User } from './services/github/models';
 
@@ -16,9 +16,9 @@ export const initialState: GithubState = {
   isLoading: false,
 };
 
-const githubReducer: Reducer<GithubState, MemberAction> = (
+const githubReducer: Reducer<GithubState, GithubAction> = (
   state: GithubState = initialState,
-  action: MemberAction,
+  action: GithubAction,
 ) => {
   switch (action.type) {
     case ActionType.GET_MEMBERS_START:

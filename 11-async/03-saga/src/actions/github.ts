@@ -28,7 +28,7 @@ export const getMembers = {
   }),
 };
 
-export type MemberAction =
+export type GithubAction =
   | ReturnType<typeof getMembers.start>
   | ReturnType<typeof getMembers.succeed>
   | ReturnType<typeof getMembers.fail>;
