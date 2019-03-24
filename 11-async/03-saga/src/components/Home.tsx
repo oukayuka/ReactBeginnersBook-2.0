@@ -11,7 +11,7 @@ const Home: FC = () => (
   <>
     <List celled relaxed>
       {companies.map(companyName => (
-        <List.Item className="list-item">
+        <List.Item className="list-item" key={companyName}>
           <List.Icon name="users" size="large" verticalAlign="middle" />
           <List.Content>
             <Link to={`/${companyName}/members`}>

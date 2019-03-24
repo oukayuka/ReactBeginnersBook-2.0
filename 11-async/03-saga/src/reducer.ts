@@ -19,7 +19,7 @@ export const initialState: GithubState = {
 const githubReducer: Reducer<GithubState, GithubAction> = (
   state: GithubState = initialState,
   action: GithubAction,
-) => {
+): GithubState => {
   switch (action.type) {
     case ActionType.GET_MEMBERS_START:
       return {

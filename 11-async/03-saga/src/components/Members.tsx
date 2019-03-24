@@ -14,7 +14,7 @@ export interface MembersProps {
   isLoading?: boolean;
 }
 
-const Counter: FC<MembersProps> = ({
+const Members: FC<MembersProps> = ({
   companyName = '<会社名>',
   users = [],
   isLoading = false,
@@ -54,4 +54,4 @@ const Counter: FC<MembersProps> = ({
   );
 };
 
-export default Counter;
+export default Members;
