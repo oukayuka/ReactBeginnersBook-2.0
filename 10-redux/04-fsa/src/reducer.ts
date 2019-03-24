@@ -11,7 +11,7 @@ export const initialState: CounterState = { count: 0 };
 const counterReducer: Reducer<CounterState, CounterAction> = (
   state: CounterState = initialState,
   action: CounterAction,
-) => {
+): CounterState => {
   switch (action.type) {
     case ADD:
       return {

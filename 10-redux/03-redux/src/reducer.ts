@@ -7,10 +7,10 @@ export interface CounterState {
 
 export const initialState: CounterState = { count: 0 };
 
-const appReducer: Reducer<CounterState, CounterAction> = (
+const counterReducer: Reducer<CounterState, CounterAction> = (
   state: CounterState = initialState,
   action: CounterAction,
-) => {
+): CounterState => {
   switch (action.type) {
     case CounterActionType.ADD:
       return {
@@ -36,4 +36,4 @@ const appReducer: Reducer<CounterState, CounterAction> = (
   }
 };
 
-export default appReducer;
+export default counterReducer;
