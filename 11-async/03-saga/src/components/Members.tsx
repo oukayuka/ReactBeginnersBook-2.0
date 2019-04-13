@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { Helmet } from 'react-helmet';
 import { Card, Header, Image } from 'semantic-ui-react';
 import capitalize from 'lodash/capitalize';
 
 import { User } from '../services/github/models';
+import HtmlTitle from './HtmlTitle';
 import Spinner from './Spinner';
 
 import './Members.css';
@@ -23,9 +23,7 @@ const Members: FC<MembersProps> = ({
 
   return (
     <>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
+      <HtmlTitle title={title} />
       <div className="Members" data-test="users">
         <Header as="h2">{title}</Header>
         {isLoading ? (
