@@ -4,6 +4,15 @@
 
 内容は随時アップデートされます。なおページの指定は「修正前（修正後）」のフォーマットで記述されています。
 
+p.19（p.19）
+
+```diff
+ ・ESLint（dbaeumer.vscode-eslint）…… JavaScriptの静的コード解析ツールESLintをVSCodeに統合する。
+-・stylelint …… CSS用のリンターstylelintをVSCodeに統合する。
++・stylelint-plus（hex-ci.stylelint-plus）…… CSS用のリンターstylelintをVSCodeに統合する。
+ ・Visual Studio IntelliCode（VisualStudioExptTeam.vscodeintellicode）…… AI支援によりAPIサジェスト一覧の精度を向上させる。
+```
+
 p.32（p.32）
 
 ```diff
