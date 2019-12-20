@@ -4,7 +4,7 @@ import './App.css';
 
 class App extends Component {
   render() {
-    const logoOptions = {
+    const logoAttrs = {
       alt: "logo",
       className: "App-logo",
       src: logo
@@ -18,7 +18,7 @@ class App extends Component {
           {
             // コメントはこう書く
           }
-          <img {...logoOptions} />
+          <img {...logoAttrs} />
           {title && <p>{title}</p>}
           {targets.map(target => (
             <p>Hello, {target}!</p>

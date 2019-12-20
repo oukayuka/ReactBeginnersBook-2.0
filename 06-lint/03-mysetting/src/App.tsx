@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-key, react/jsx-props-no-spreading, jsx-a11y/alt-text */
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
-    const logoOptions = {
+    const logoAttrs = {
       alt: 'logo',
       className: 'App-logo',
       src: logo,
@@ -18,7 +19,7 @@ class App extends Component {
           {
             // コメントはこう書く
           }
-          <img alt={logoOptions.alt} {...logoOptions} />
+          <img {...logoAttrs} />
           {title && <p>{title}</p>}
           {targets.map(target => (
             <p>Hello, {target}!</p>

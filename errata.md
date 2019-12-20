@@ -38,6 +38,37 @@ p.32（p.32）
 +・sort() は各要素を、与えられた比較関数（戻り値が -1: 前に移動、0: 移動しない、1: 後ろに移動）によって並べ替えた新しい配列を返す
 ```
 
+p.72（p.72）
+
+```diff
+- yarn add -D eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser
+-
+-「あれ？　ESLint 本体はインストールしなくていいんですか？」
+-「Create React App で生成されたプロジェクトはには便利なスクリプト群がまとまったパッケージのreact-scripts というものが最初から入ってるんだけど、その中にすでに ESLint が含まれてるんだよ。react-scripts の ESLint と二重インストールになる上、バージョン不整合の問題もあるので、別途 ESLint をインストールするのはやめたほうがいい」
++ yarn add -D eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser
++
++「Create React App で作成されたプロジェクトには ESLint パッケージが含まれていてそれを使うことができるんだけど、ここでは各種プラグインを併せて導入するので、バージョン整合のためにも最新の ESLint を明示的にインストールしておくよ」
+```
+
+
+p.73（p.73）
+```diff
+-"eslint.autoFixOnSave": true,
+-"eslint.enable": true,
+-"eslint.validate": [
+-  "javascript", "javascriptreact", "typescript", "typescriptreact"
+-],
++"editor.codeActionsOnSave": {
++  "source.fixAll.eslint": true
++},
+```
+
+```diff
+-プロジェクトルートに .vscode/ というディレクトリを作って、そこに settings を置けば、
++プロジェクトルートに .vscode/ というディレクトリを作って、そこに settings.json を置けば、
+```
+
+
 p.152（p.152）
 
 ```diff
