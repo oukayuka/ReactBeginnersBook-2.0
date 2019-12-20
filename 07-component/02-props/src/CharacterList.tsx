@@ -22,6 +22,7 @@ class CharacterList extends Component<CharacterListProps> {
         <Header as="h2">{school}</Header>
         <Item.Group>
           {characters.map(c => (
+            /* eslint-disable react/jsx-key */
             <Item>
               <Icon name="user circle" size="huge" />
               <Item.Content>
@@ -33,6 +34,7 @@ class CharacterList extends Component<CharacterListProps> {
                 </Item.Meta>
               </Item.Content>
             </Item>
+            /* eslint-enable */
           ))}
         </Item.Group>
       </>
