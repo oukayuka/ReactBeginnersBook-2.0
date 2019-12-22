@@ -50,7 +50,6 @@ p.72（p.72）
 +「Create React App で作成されたプロジェクトには ESLint パッケージが含まれていてそれを使うことができるんだけど、ここでは各種プラグインを併せて導入するので、バージョン整合のためにも最新の ESLint を明示的にインストールしておくよ」
 ```
 
-
 p.73（p.73）
 ```diff
 -"eslint.autoFixOnSave": true,
@@ -68,6 +67,17 @@ p.73（p.73）
 +プロジェクトルートに .vscode/ というディレクトリを作って、そこに settings.json を置けば、
 ```
 
+p.88（p.86）
+```diff
+-二つめは『Local State』となってまけど、
++二つめは『Local State』となってますけど、
+```
+
+p.102（p.103）
+```diff
+-まず関数コンポーネントで見た目だけを整えたPresentational Componentを作ます。
++まず関数コンポーネントで見た目だけを整えたPresentational Componentを作ります。
+```
 
 p.152（p.152）
 
