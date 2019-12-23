@@ -10,6 +10,8 @@ interface AppState {
 }
 
 class App extends Component<{}, AppState> {
+  timerId?: NodeJS.Timer;
+
   constructor(props: {}) {
     super(props);
     this.state = { timeLeft: LIMIT };
@@ -37,8 +39,6 @@ class App extends Component<{}, AppState> {
   componentWillUnmount = () => {
     clearInterval(this.timerId as NodeJS.Timer);
   };
-
-  timerId?: NodeJS.Timer;
 
   render() {
     const { timeLeft } = this.state;

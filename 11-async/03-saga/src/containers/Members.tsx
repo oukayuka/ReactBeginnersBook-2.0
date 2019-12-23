@@ -46,7 +46,7 @@ const MembersContainer: FC<EnhancedMembersProps> = ({
 
   useEffect(() => {
     getMembersStart(companyName);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Members companyName={companyName} users={users} isLoading={isLoading} />
@@ -54,8 +54,5 @@ const MembersContainer: FC<EnhancedMembersProps> = ({
 };
 
 export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps,
-  )(MembersContainer),
+  connect(mapStateToProps, mapDispatchToProps)(MembersContainer),
 );

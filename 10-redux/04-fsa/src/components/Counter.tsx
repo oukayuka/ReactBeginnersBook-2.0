@@ -12,9 +12,9 @@ export interface CounterProps {
 
 const Counter: FC<CounterProps> = ({
   count = 0,
-  add = () => {},
-  decrement = () => {},
-  increment = () => {},
+  add = () => undefined,
+  decrement = () => undefined,
+  increment = () => undefined,
 }) => (
   <Card>
     <Statistic className="number-board">
