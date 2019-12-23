@@ -123,6 +123,20 @@ p.118（p.117-118）
 +「うん、その通り。あと補足だけど、Custom Hookの関数名は『use』で始める決まりになってるので忘れないで」
 ```
 
+p.143（p.143）
+
+```diff
+ const Counter: FC<CounterProps> = ({
+   count = 0,
+-  add = () => {},
+-  decrement = () => {},
+-  increment = () => {},
++  add = () => undefined,
++  decrement = () => undefined,
++  increment = () => undefined,
+ }) => (
+```
+
 p.152（p.152）
 
 ```diff

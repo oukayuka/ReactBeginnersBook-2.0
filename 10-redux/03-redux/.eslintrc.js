@@ -7,13 +7,20 @@ module.exports = {
   },
   extends: [
     'airbnb',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
+    'plugin:import/typescript',
+    'plugin:jest/recommended',
+    'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
+    'plugin:react/recommended',
     'prettier',
     'prettier/@typescript-eslint',
-    'prettier/react'
+    'prettier/react',
+    'prettier/standard',
   ],
   globals: {
     Atomics: 'readonly',
@@ -30,28 +37,32 @@ module.exports = {
   },
   plugins: [
     '@typescript-eslint',
+    'import',
     'jest',
-    'prettier',
+    'jsx-a11y',
     'prefer-arrow',
+    'prettier',
     'react',
-    'react-hooks'
+    'react-hooks',
   ],
   root: true,
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', 'jsx', '.ts', '.tsx']
-      }
-    },
-    react: {
-      version: 'detect'
-    }
-  },
   rules: {
     // eslint official
+    'linebreak-style': ['error', 'unix'],
     'newline-before-return': 'error',
     'no-console': 'warn',
+    'no-continue': 'off',
+    quotes: ['error', 'single', { avoidEscape: true }],
     'require-yield': 'error',
+    semi: ['error', 'always'],
+    // for react-app-env.d.ts (https://github.com/facebook/create-react-app/issues/6560)
+    'spaced-comment': [
+      'error',
+      'always',
+      {
+        markers: ['/'],
+      },
+    ],
 
     // @typescript-eslint
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -77,14 +88,18 @@ module.exports = {
         extensions: ['jsx', 'tsx']
       }
     ],
-    'react/jsx-one-expression-per-line': 'off',
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error',
+    'react/jsx-props-no-spreading': [
+      'warn',
+      {
+        custom: 'ignore',
+      },
+    ],
     'react/prop-types': 'off',
     'react/prefer-stateless-function': 'off',
 
     // react hooks
     'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
 
     // import
     'import/extensions': [
@@ -98,17 +113,19 @@ module.exports = {
       }
     ],
     'import/prefer-default-export': 'off',
-
-    // prettier
-    'prettier/prettier': [
-      'error', {
-        bracketSpacing: true,
-        printWidth: 80,
-        semi: true,
-        singleQuote: true,
-        trailingComma: 'all',
-        useTabs: false
+  },
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', 'jsx', '.ts', '.tsx'],
+        paths: ['src'],
       }
-    ]
-  }
+    },
+    react: {
+      version: 'detect'
+    }
+  },
 };
