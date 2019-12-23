@@ -92,6 +92,37 @@ p.115-116（p.115）
 +「でも不格好だし、tick() の中で判定してリセットするようにしちゃった。こっちのほうがスマートでしょ」
 ```
 
+p.118（p.117-118）
+
+```diff
+-  const tick = () => {
+-    setTimeLeft(prevTime => (prevTime === 0 ? limitSec : prevTime - 1));
+-  };
+-
+   useEffect(() => {
++    const tick = () => {
++      setTimeLeft(prevTime => (prevTime === 0 ? limitSec : prevTime - 1));
++    };
+     const timerId = setInterval(tick, 1000);
+
+     return () => clearInterval(timerId);
+-  }, []);
++  }, [limitSec]);
+
+   return [timeLeft, reset];
+ };
+ 
+-「この useTimer() というのが自分で作った Custom Hook だね。変数 timeLeft と関数 reset() を返すようになってる。中身の処理は、さっきのサンプルコードと全く同じなんだけど」
++「この useTimer() というのが自分で作った Custom Hook だね。変数 timeLeft と関数 reset() を返すようになってる」
+ 「へ―――、綺麗にカプセル化されてますね」
+ 「うん、そのおかげで AppContainer の中身は実質2行で済んでる。Custom Hook を汎用的に作れば、複数のコンポーネントで使い回すことも可能だよ。ここでもある程度はそうしてるわけだけど。useTimer() に渡してあげる引数 limitSec によって、1分タイマーにも5分タイマーにもなる」
+ 「お、すごい」
++「ただしこの limitSec の値がこの Custom Hook の全体的な振る舞いを変えることになるため、空だった useEffect() の依存リストに limitSec を追加して、かつ tick() の定義を useEffect() 内に移動してるので、そこは気をつけて見ておいて」
++「なるほど、limitSec が変更されたら即座に tick() を定義し直してリセットの挙動を変更するようにしてるんですね」
+-「あと補足だけど、Custom Hookの関数名は『use』で始める決まりになってるので忘れないで」
++「うん、その通り。あと補足だけど、Custom Hookの関数名は『use』で始める決まりになってるので忘れないで」
+```
+
 p.152（p.152）
 
 ```diff

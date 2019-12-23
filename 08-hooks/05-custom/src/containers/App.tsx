@@ -9,15 +9,14 @@ const useTimer = (limitSec: number): [number, () => void] => {
     setTimeLeft(limitSec);
   };
 
-  const tick = () => {
-    setTimeLeft(prevTime => (prevTime === 0 ? limitSec : prevTime - 1));
-  };
-
   useEffect(() => {
+    const tick = () => {
+      setTimeLeft(prevTime => (prevTime === 0 ? limitSec : prevTime - 1));
+    };
     const timerId = setInterval(tick, 1000);
 
     return () => clearInterval(timerId);
-  }, []);
+  }, [limitSec]);
 
   return [timeLeft, reset];
 };
