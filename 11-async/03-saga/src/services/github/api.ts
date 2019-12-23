@@ -20,18 +20,14 @@ export const getMembersFactory = (optionConfig?: ApiConfig) => {
   const instance = axios.create(config);
 
   const getMembers = async (organizationName: string) => {
-    try {
-      const response = await instance.get(`/orgs/${organizationName}/members`);
+    const response = await instance.get(`/orgs/${organizationName}/members`);
 
-      if (response.status !== 200) {
-        throw new Error('Server Error');
-      }
-      const members: User[] = response.data;
-
-      return members;
-    } catch (err) {
-      throw err;
+    if (response.status !== 200) {
+      throw new Error('Server Error');
     }
+    const members: User[] = response.data;
+
+    return members;
   };
 
   return getMembers;
