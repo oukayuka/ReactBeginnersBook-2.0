@@ -21,6 +21,12 @@ p.19（p.19）
  ・Visual Studio IntelliCode（VisualStudioExptTeam.vscodeintellicode）…… AI支援によりAPIサジェスト一覧の精度を向上させる。
 ```
 
+p.25（p.25）
+```diff
+-このJSONファイルのdependencies情報を編集してからyarnを実行してもaddやdelete相当のことができるよ。
++このJSONファイルのdependencies情報を編集してからyarnを実行してもaddやremove相当のことができるよ。
+```
+
 p.32（p.32）
 
 ```diff
