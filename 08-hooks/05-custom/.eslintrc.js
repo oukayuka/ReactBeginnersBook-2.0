@@ -6,17 +6,17 @@ module.exports = {
     'jest/globals': true
   },
   extends: [
-    'airbnb',
     'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:jest/recommended',
+    'airbnb',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'plugin:jest/recommended',
-    'plugin:jsx-a11y/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
-    'plugin:react/recommended',
     'prettier',
     'prettier/@typescript-eslint',
     'prettier/react',
@@ -48,13 +48,10 @@ module.exports = {
   root: true,
   rules: {
     // eslint official
-    'linebreak-style': ['error', 'unix'],
     'newline-before-return': 'error',
     'no-console': 'warn',
     'no-continue': 'off',
-    quotes: ['error', 'single', { avoidEscape: true }],
     'require-yield': 'error',
-    semi: ['error', 'always'],
     // for react-app-env.d.ts (https://github.com/facebook/create-react-app/issues/6560)
     'spaced-comment': [
       'error',
